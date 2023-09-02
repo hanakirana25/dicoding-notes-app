@@ -2,9 +2,15 @@ import React from "react";
 import { showFormattedDate } from "../utils/data";
 
 const NotesList = ({notes, onDelete}) => {
+
     return(
         <>
             {
+                notes.length === 0 ?
+                <h1>
+                    Tidak ada catatan.
+                </h1>
+                :
                 notes.map((note) => (
                     <div className="notes-list">
                         <div className="spread-element">
