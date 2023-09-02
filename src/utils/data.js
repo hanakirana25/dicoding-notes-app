@@ -1,5 +1,4 @@
-const getInitialData = () => {
-    return [
+let notes = [
     {
         id: 1,
         title: "Babel",
@@ -42,10 +41,13 @@ const getInitialData = () => {
         createdAt: '2022-04-14T04:27:34.572Z',
         archived: false,
         },
-    ];
-}
+    ]
   
-  const showFormattedDate = (date) => {
+function getInitialData() {
+    return notes;
+}
+
+const showFormattedDate = (date) => {
     const options = {
       weekday: "long",
       year: "numeric",
@@ -54,5 +56,18 @@ const getInitialData = () => {
     }
     return new Date(date).toLocaleDateString("id-ID", options)
   }
+
+function addNote(note) {
+    notes = [...notes, { 
+        id: +new Date(),
+        createdAt: new Date(),
+        archived: false, 
+        ...note 
+    }];
+}
+
+function deleteNote(id) {
+    notes = notes.filter((note) => note.id !== id);
+}
   
-  export { getInitialData, showFormattedDate };
+export { getInitialData, showFormattedDate, addNote, deleteNote };

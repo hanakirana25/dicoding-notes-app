@@ -6,7 +6,7 @@ input {
     width: 98%;
     height: 20px;
     border-radius: 8px;
-    border: 1px solid #CCCCCC;
+    border: 0px solid #CCCCCC;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -14,7 +14,7 @@ input {
 textarea {
     width: 98%;
     border-radius: 8px;
-    border: 1px solid #CCCCCC;
+    border: 0px solid #CCCCCC;
     padding: 10px;
     margin-bottom: 10px;
     font-family: 'Nunito', sans-serif;
@@ -36,13 +36,18 @@ p {
 }
 
 .container {
-    padding: 10px 100px;
+    padding: 10px 120px;
 }
 
 .spread-element {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
 }
 
 .right-element {
@@ -69,7 +74,8 @@ p {
 }
 
 .form-container {
-    border: 1px solid #FFBB5C;
+    /* border: 1px solid #FFBB5C; */
+    background-color: #FFBB5C;
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 40px;
@@ -79,14 +85,15 @@ p {
     padding: 12px;
     border-radius: 8px;
     border: 0;
-    background-color: #FF9B50;
+    background-color: #E25E3E;
     color: #FFF;
+    margin: 20px 0px;
 }
 
 .delete-button {
     padding: 8px 12px;
     border-radius: 8px;
     border: 0;
-    background-color: #E25E3E;
+    background-color: #C63D2F;
     color: #FFF;
 }
