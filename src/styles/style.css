@@ -1,5 +1,17 @@
+:root {
+    --font-color: #0a0a0a;
+    --background-color: #fff;
+}
+   
+[data-theme='dark'] {
+    --font-color: #eee;
+    --background-color: #333;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 input {
@@ -31,8 +43,13 @@ p {
 }
 
 .navbar {
-    background-color: #FFF;
+    background-color: transparent;
     padding: 10px;
+}
+
+.text-navbar {
+    text-decoration: none !important;
+    color: var(--font-color);
 }
 
 .container {
@@ -64,7 +81,7 @@ p {
     margin-top: 10px;
 }
 
-.notes-list {
+[data-theme='light'] .notes-list {
     padding: 10px;
     margin: 10px 0px;
     border-radius: 15px;
@@ -73,11 +90,27 @@ p {
 
 }
 
-.form-container {
+[data-theme='dark'] .notes-list {
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    border: 1px solid #7e7e7e;
+    vertical-align: top;
+}
+
+[data-theme='light'] .form-container {
     /* border: 1px solid #FFBB5C; */
     background-color: #FFBB5C;
     border-radius: 15px;
-    padding: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+[data-theme='dark'] .form-container {
+    /* border: 1px solid #FFBB5C; */
+    background-color: #7e7e7e;
+    border-radius: 15px;
+    padding: 40px;
     margin-bottom: 40px;
 }
 
@@ -96,4 +129,28 @@ p {
     border: 0;
     background-color: #C63D2F;
     color: #FFF;
+}
+
+.basic-button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
+    background-color: transparent;
+    color: var(--font-color);
+}
+
+.parent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 80vh;
 }

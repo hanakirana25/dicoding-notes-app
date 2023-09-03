@@ -8,7 +8,7 @@ const Navbar = () => {
     return(
         <div className="navbar">
             <div className="spread-element">
-                <Link to="/" style={{textDecoration: 'none', color: "#0a0a0a"}}><h1>Notes App.</h1></Link>
+                <Link to="/" className="text-navbar"><h1>Notes App.</h1></Link>
                 <p>by Hana Kirana</p>
             </div>
         </div>
